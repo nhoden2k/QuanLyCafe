@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -28,7 +35,7 @@ section {
     font-size: 9rem;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: .05rem var(#332e2e);
+    -webkit-text-stroke: .05rem var(--main-color);
     letter-spacing: .2rem;
     text-align: center;
     pointer-events: none;
@@ -41,7 +48,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    color: var(#332e2e);
+    color: #332e2e;
     font-size: 3rem;
 }
 
@@ -90,7 +97,7 @@ section {
 .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: #332e2e;
+    color: var(#332e2e);
 }
 
 .header .btn {
@@ -166,4 +173,63 @@ section {
     margin-top: 5rem;
 }
 
+/* ABOUT */
 
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 42rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+
+
+.about .row .content {
+    flex: 1 1 42rem;
+}
+
+.about .row .content .title {
+    color: var(--main-color);
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+.about .row .content p {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.about .row .content .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.about .row .content .icons-container .icons {
+    flex: 1 1 15rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.about .row .content .icons-container .icons img {
+    height: 5rem;
+}
+
+.about .row .content .icons-container .icons h3 {
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
